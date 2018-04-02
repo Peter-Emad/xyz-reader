@@ -4,7 +4,7 @@
     <dimen name="detail_body_text_size">22sp</dimen>
     <item name="detail_body_line_spacing_multiplier" format="float" type="fraction">1.25</item>
 
-    <dimen name="fab_elevation">2dp</dimen>
+    <dimen name="fab_elevation">6dp</dimen>
     <dimen name="fab_press_translation_z">6dp</dimen>
     <dimen name="fab_margin">24dp</dimen>
     <dimen name="margin_5dp">5dp</dimen>
@@ -15,5 +15,7 @@
     <dimen name="margin_20dp">20dp</dimen>
     <dimen name="txt_30sp">30sp</dimen>
     <dimen name="txt_18sp">18sp</dimen>
+    <dimen name="app_bar_elevation">4dp</dimen>
+    <dimen name="card_view_elevation">2dp</dimen>
 
 </resources>

@@ -6,8 +6,7 @@
     android:clickable="true"
     android:focusable="true"
     android:foreground="?selectableItemBackground"
-    app:cardCornerRadius="@dimen/margin_5dp"
-    app:cardElevation="@dimen/margin_5dp">
+    app:cardCornerRadius="@dimen/margin_5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +17,7 @@
         <com.example.xyzreader.ui.DynamicHeightNetworkImageView
             android:id="@+id/thumbnail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:background="@color/photo_placeholder"
             android:scaleType="centerCrop" />
 
