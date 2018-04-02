@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/articleDetailProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/articleDetailContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsingToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/colorPrimary"
+                app:expandedTitleMargin="@dimen/margin_20dp"
+                app:expandedTitleTextAppearance="@style/txtBoldWhite"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                <ImageView
+                    android:id="@+id/imgArticleImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:scaleType="centerCrop" />
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbarArticleDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_10dp"
+                    app:contentInsetStart="@dimen/margin_10dp"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:padding="@dimen/margin_5dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_5dp"
+                android:padding="@dimen/margin_10dp"
+                app:cardCornerRadius="@dimen/margin_5dp"
+                app:cardElevation="@dimen/margin_5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtArticleTitle"
+                        style="@style/TextAppearance.AppCompat.Headline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorArticleTitleBackground"
+                        android:padding="@dimen/margin_10dp"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold"
+
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorArticleTitleBackground"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_10dp">
+
+                        <TextView
+                            android:id="@+id/txtArticleDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="@dimen/margin_5dp"
+                            android:textColor="@color/colorWhite" />
+
+
+                        <TextView
+                            android:id="@+id/txtArticleAuthor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorWhite" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtArticleBody"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        android:padding="@dimen/margin_10dp"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="@dimen/txt_18sp" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/share_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:clickable="true"
+            android:contentDescription="@string/action_share"
+            android:src="@drawable/ic_share"
+            app:elevation="@dimen/fab_elevation"
+            app:layout_anchor="@id/appBar"
+            app:layout_anchorGravity="bottom|right|end"
+            app:pressedTranslationZ="@dimen/fab_press_translation_z"
+            app:rippleColor="@android:color/white" />
+
+    </android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>
